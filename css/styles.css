@@ -248,6 +248,8 @@ p {
     object-fit: cover;
 }
 
+
+
 .picbox_cap {
     display: flex;
     flex-wrap: wrap;
@@ -260,16 +262,19 @@ p {
 }
 
 .picbox_cap_menus {
+    animation-name: entrees_anim;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;   
     justify-content: space-between;
     width:325px;
-    height:65px;
+    height:75px;
     border-radius: 15px;
     background-color: #FFFFFF;
 }
 
 .picbox_cap_menus_title {
+    animation-name: entrees_anim;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -283,6 +288,7 @@ p {
 
 
 .picbox_cap_text_menu_title {
+    animation-name: entrees_anim;
     font-family: 'Shrikhand';
     display: flex;
     flex-direction: column;
@@ -294,11 +300,31 @@ p {
     margin-bottom: .75em;
 }
 
+@keyframes entrees_anim{
+    0% {
+        transform: translateY(65px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 .picbox_cap_text_menus {
+    
+    transform: translateY(65px);
+    animation-name: entrees_anim;
+    animation-duration: 1500ms;
+    animation-fill-mode: forwards;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
+    white-space: wrap;
+
+    text-overflow: ellipsis;
     height: 56px;
-    width: 260px;
+    width: 175px;
     font-size: .70rem;
     padding-left:1em;
     padding-bottom: .75em;
@@ -315,11 +341,12 @@ p {
 
 .picbox_cap_text_menus h2 {
     line-height: 1rem;
+    margin-bottom: 2%;
 }
 
 .picbox_cap_text_menus p {
-    padding-top: 0px;
-    line-height: 0px;
+    padding-top: 0;
+    line-height: .75rem;
 }
 
 .picbox_cap_heart  {
@@ -378,19 +405,75 @@ p {
     
 }
 
+.price_wrap {
+    display: flex;
+    transition-property: transform;
+    transition-duration: 500ms;
+    transform: translateX(60px);
+}
 
+.price_wrap:hover {
+    display: flex;
+    transform: translateX(0px);
+}
 
+@keyframes circle_check {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 
-
-
-
+}
 
 .picbox_cap_price {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding-top: 30px;
-    width: 50px;
+    width: 40px;
     height: 64px;
+    transform: translateX(0px);
+    transition-property: transform;
+    transition-duration: 1000ms;
+    background-color:#FFFFFF;
+    
+
+}
+
+.picbox_cap_price_checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+    width: 60px;
+    height: 64px;
+    transform: translateX(0px);
+    transition-property: transform;
+    transition-duration: 1000ms;
+    background-color: #99E2D0;
+    
+
+}
+
+.picbox_cap_price_checkbox_circle {
+    display: flex;
+    justify-content: center;
+    animation: circle_check;
+    animation-duration: 2000ms;
+    transition: transform;
+    transform: rotate(0);
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    margin-top: -2px;
+    padding: 0;
+
+}
+
+.picbox_cap_price:hover {
+
+    transform: translateX(0px);
 
 }
 
@@ -448,14 +531,7 @@ p {
     border: 2px solid #F2F2F2;
 }
 
-.section_header_menus:after {
-    content: '';
-    display:block;
-    position: absolute;
-    width: 40px;
-    bottom: -1px;
-    border:1px solid #99E2D0;
-  }
+
 
 
 .container_main_restpic_container {

@@ -311,6 +311,70 @@ p {
     }
 }
 
+
+
+.picbox_cap_text_menus_entrees {
+    
+    transform: translateY(65px);
+    animation-name: entrees_anim;
+    animation-duration: 1500ms;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    height: 56px;
+    width: 175px;
+    font-size: .70rem;
+    padding-left:1em;
+    padding-bottom: .75em;
+    margin-top: .75em;
+    margin-bottom: .75em;
+}
+
+.picbox_cap_text_menus_maindish {
+    
+    transform: translateY(65px);
+    animation-name: entrees_anim;
+    animation-duration: 1500ms;
+    animation-delay: 750ms;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    height: 56px;
+    width: 175px;
+    font-size: .70rem;
+    padding-left:1em;
+    padding-bottom: .75em;
+    margin-top: .75em;
+    margin-bottom: .75em;
+}
+
+.picbox_cap_text_menus_desserts {
+    
+    transform: translateY(65px);
+    animation-name: entrees_anim;
+    animation-duration: 1500ms;
+    animation-delay: 1500ms;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    height: 56px;
+    width: 175px;
+    font-size: .70rem;
+    padding-left:1em;
+    padding-bottom: .75em;
+    margin-top: .75em;
+    margin-bottom: .75em;
+}
+
 .picbox_cap_text_menus {
     
     transform: translateY(65px);
@@ -321,7 +385,6 @@ p {
     flex-wrap: nowrap;
     flex-direction: column;
     white-space: wrap;
-
     text-overflow: ellipsis;
     height: 56px;
     width: 175px;
@@ -344,7 +407,40 @@ p {
     margin-bottom: 2%;
 }
 
+.picbox_cap_text_menus_desserts h2 {
+    margin-top: .25rem;
+    line-height: 1rem;
+    margin-bottom: 2%;
+}
+
+.picbox_cap_text_menus_entrees h2 {
+    margin-top: .25rem;
+    line-height: 1rem;
+    margin-bottom: 2%;
+}
+
+.picbox_cap_text_menus_maindish h2 {
+    margin-top: .25rem;
+    line-height: 1rem;
+    margin-bottom: 2%;
+}
+
 .picbox_cap_text_menus p {
+    padding-top: 0;
+    line-height: .75rem;
+}
+
+.picbox_cap_text_menus_entrees p {
+    padding-top: 0;
+    line-height: .75rem;
+}
+
+.picbox_cap_text_menus_maindish p {
+    padding-top: 0;
+    line-height: .75rem;
+}
+
+.picbox_cap_text_menus_desserts p {
     padding-top: 0;
     line-height: .75rem;
 }
@@ -415,7 +511,17 @@ p {
 .price_wrap:hover {
     display: flex;
     transform: translateX(0px);
+  
+    animation-duration: 1sec;
 }
+
+.price_wrap:hover .picbox_cap_price_checkbox_circle{
+    display: flex;
+    animation: circle_check;
+
+    animation-duration: 1000ms;
+}
+
 
 @keyframes circle_check {
     0% {
@@ -426,6 +532,9 @@ p {
     }
 
 }
+
+
+
 
 .picbox_cap_price {
     display: flex;
@@ -446,12 +555,13 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 30px;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 9px;
+    padding-bottom: 2px;
     width: 60px;
     height: 64px;
-    transform: translateX(0px);
-    transition-property: transform;
-    transition-duration: 1000ms;
+
     background-color: #99E2D0;
     
 
@@ -460,22 +570,17 @@ p {
 .picbox_cap_price_checkbox_circle {
     display: flex;
     justify-content: center;
-    animation: circle_check;
-    animation-duration: 2000ms;
+    align-items: center;
+    margin-top: 0;
     transition: transform;
     transform: rotate(0);
     color: #FFFFFF;
     font-size: 1.5rem;
-    margin-top: -2px;
     padding: 0;
 
 }
 
-.picbox_cap_price:hover {
 
-    transform: translateX(0px);
-
-}
 
 .picbox_cap_heart_menu_title {
     display: flex;

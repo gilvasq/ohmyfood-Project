@@ -127,6 +127,19 @@ h2 {
     line-height: 0rem;
 }
 
+h3 {
+
+    font-family:'Roboto', sans-serif; 
+    font-size: 1.5rem;
+    line-height: 0rem;
+}
+
+h4 {
+    font-family:'Roboto', sans-serif; 
+    font-size: 1.35rem;
+    line-height: 0rem;
+}
+
 p {
     line-height: 1.25rem;
     margin-top: 0px;
@@ -203,7 +216,7 @@ p {
 .book_menu_text {
     text-align: center;
     width :295px;
-    height:100px;
+    height:75px;
     max-width:90%;
     margin: 0 auto;
     padding: 0px 15px 0px 15px;
@@ -627,7 +640,7 @@ p {
     justify-content: center;
     font-size: 1.25rem;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 10px;
     width: 325px;
 }
 

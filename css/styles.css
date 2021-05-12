@@ -330,7 +330,6 @@ p {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    white-space: wrap;
     text-overflow: ellipsis;
     height: 56px;
     width: 175px;
@@ -351,7 +350,6 @@ p {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    white-space: wrap;
     text-overflow: ellipsis;
     height: 56px;
     width: 175px;
@@ -372,7 +370,7 @@ p {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    white-space: wrap;
+ 
     text-overflow: ellipsis;
     height: 56px;
     width: 175px;
@@ -392,7 +390,7 @@ p {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    white-space: wrap;
+
     text-overflow: ellipsis;
     height: 56px;
     width: 175px;
@@ -520,7 +518,7 @@ p {
     display: flex;
     transform: translateX(0px);
   
-    animation-duration: 1sec;
+    animation-duration: 1000ms;
 }
 
 .price_wrap:hover .picbox_cap_price_checkbox_circle{
@@ -723,7 +721,7 @@ p {
     display: flex;
     flex-direction: column;
     margin: .5em auto .5em auto;
-    padding: .5em auto .25em auto;
+
     width: 325px;
     height:75px;
     display: flex;

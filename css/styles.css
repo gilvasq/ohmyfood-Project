@@ -18,12 +18,11 @@ a:link, a:visited {
     justify-content: center;
     position: absolute; /*position: fixed;*/
     z-index: 15;
- 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    animation: spinnerbg_fadeout 6500ms;
+    animation: spinnerbg_fadeout 4500ms;
     
 }
 
@@ -43,10 +42,11 @@ a:link, a:visited {
 
 .spinnerload {
     opacity: 0;
-    animation: spinner-load 6500ms;
+    animation: spinner-load 4500ms;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     align-items: center;
     z-index: 15;
     font-size: 10rem;
@@ -58,9 +58,10 @@ a:link, a:visited {
         transform: rotate(0deg);
         display:block;
         opacity: 1;
+        
     }
     100% {
-        transform: rotate(4turn);
+        transform: rotate(3turn);
         display: none;
         opacity: 1;
 
@@ -69,14 +70,21 @@ a:link, a:visited {
 
 @keyframes spinnerbg_fadeout{
     0% {
-        z-index: 25;
+        z-index: 50;
         display:block;
+        background-color: #FFFFFF;
         opacity: 1;
     
     }
-    100% {
+    90% {
+        background-color: #FFFFFF;
         opacity: 1;
-        z-index: 25;
+        z-index: 50;
+    }
+    100% {
+        background-color: #FFFFFF;
+        opacity: 0;
+        z-index: 50;
     }
 }
 
@@ -517,7 +525,7 @@ p {
 
 .price_wrap:hover .picbox_cap_price_checkbox_circle{
     display: flex;
-    animation: circle_check;
+     animation: circle_check;
 
     animation-duration: 1000ms;
 }
@@ -973,5 +981,7 @@ p {
         box-shadow: 3px 3px 5px 3px lightgray;
     }
 
+
+    
 
 }
